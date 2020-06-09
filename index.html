@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <!-- O ATRIBUTO DRAGGABLE FAZ COM QUE OS ITENS QUE O POSSUIREM POSSAM SER ARRASTADOS -->
+    <main class="container">
         <div class="boards">
             <div class="board">
                 <h3>Todo</h3>
                 <div class="dropzone">
                     <div class="card" draggable="true">
-                        <div class="status"></div>
+                        <div class="status green"></div>
                         <div class="content">Fazer layout</div>
                     </div>
                 </div>
@@ -26,7 +27,7 @@
                 <h3>In progress</h3>
                 <div class="dropzone">
                     <div class="card" draggable="true">
-                        <div class="status"></div>
+                        <div class="status blue"></div>
                         <div class="content">Contruir estrutura</div>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
                 <h3>Done</h3>
                 <div class="dropzone">
                     <div class="card" draggable="true">
-                        <div class="status"></div>
+                        <div class="status red"></div>
                         <div class="content">Finalizar homepage</div>
                     </div>
                 </div>
@@ -44,6 +45,7 @@
         </div>
 
     </main>
-    <script src="script.js"></script>
+    <!-- O ATRIBUTO DEFER FAZ COM QUE ESSE SCRIPT SÓ SEJA LIDO DEPOIS QUE TUDO ESTIVER CARREGADO -->
+    <script src="script.js" defer></script>
 </body>
 </html>

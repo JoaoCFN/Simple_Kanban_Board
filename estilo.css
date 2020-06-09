@@ -7,7 +7,82 @@ body{
     color: #ffffff;
 }
 
+.container{
+    max-width: 800px;
+}
+
 .boards{
     display: flex;
     justify-content: space-between;
+    margin-top: 32px;
 }
+ 
+.boards .board{
+    background-color: #141316;
+    border: 1px solid #FD951F11;
+    border-radius: 4px;
+    margin: 0 16px;
+}
+
+.boards .board h3{
+    padding: 16px;
+    margin: 0;
+    color: #FD951Fcc;
+}
+
+.board .dropzone{
+    padding: 16px;
+    min-width: 282px;
+    min-height: 200px;
+}
+
+.dropzone .card{
+    padding: 16px;
+    box-shadow: 0 2px 2px -1px #FD951Fcc;
+    width: 250px;
+    margin: 25px 0;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #1A1A1C;
+}
+
+.dropzone .status{
+    width: 30px;
+    height: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.dropzone .status.green{
+    background-color: #23d2ac;
+}
+.dropzone .status.blue{
+    background-color: #33adff;
+}
+.dropzone .status.red{
+    background-color: red;
+}
+
+.card, .dropzone{
+    transition: .4s;
+}
+
+/* CLASSES QUE SERÃO ADICIONADAS PELO JAVASCRIPT */
+.highlight{
+    background-color: #FD951F08;
+}
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
+}
+.over{
+    background-color: #4cd13711;
+}
+
+@media screen and (max-width: 1050px){
+    .boards{
+        flex-direction: column;
+    }
+}
+
