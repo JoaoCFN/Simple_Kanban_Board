@@ -11,6 +11,37 @@ body{
     max-width: 800px;
 }
 
+/* INPUT */
+.form-group{
+    margin: 16px;
+}
+.form-group input{
+    padding: 10px;
+    background-color: #141316;
+    font-size: 18px;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+}
+.form-group input:focus{
+    background-color: #1A1A1C;
+}
+.form-group button{
+    padding: 10px;
+    font-size: 18px;
+    background-color: #FD951Fcc;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.form-group button:hover{
+    background-color: #FD951F;
+}
+.form-group h1{
+    color: #FD951Fcc;
+}
+
+/* DRAG AND DROP CARDS */
 .boards{
     display: flex;
     justify-content: space-between;
@@ -54,13 +85,13 @@ body{
     border-radius: 8px;
 }
 
-.dropzone .status.green{
+#todo .status{
     background-color: #23d2ac;
 }
-.dropzone .status.blue{
+#inprogress .status{
     background-color: #33adff;
 }
-.dropzone .status.red{
+#done .status{
     background-color: red;
 }
 

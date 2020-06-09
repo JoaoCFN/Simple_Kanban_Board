@@ -1,30 +1,59 @@
 // PARA O CÓDIGO FUNCIONAR, O ATRIBUTO DRAGGABLE DEVE ESTÁ ATIVO NOS CARDS DA DROPZONE
-
 const cards = document.querySelectorAll(".card");
-
 const dropzones = document.querySelectorAll(".dropzone");
+const inputJob = document.querySelector("#job");
+const addButton = document.querySelector("#add");
+const initialDropzone = document.querySelector(".initial");
+const board = document.querySelectorAll(".board");
 
-cards.forEach(card => {
-    // COMEÇOU A SER ARRASTADO
-    card.addEventListener("dragstart", dragstart);
-    // ESTÁ SENDO ARRASTADO
-    card.addEventListener("drag", drag);
-    // PAROU DE SER ARRASTADO
-    card.addEventListener("dragend", dragend);
-})
+// ADD JOB
+addButton.addEventListener("click", () => {
+    // CRIAÇÃO DOS CARD
+    const divCard = document.createElement("div");
+    divCard.setAttribute("class", "card");
+    divCard.setAttribute("draggable", "true");
 
-function dragstart({ target }){
-    dropzones.forEach(dropzone => dropzone.classList.add("highlight"))
-    target.classList.add("is-dragging");
-}
-function drag(){
-    // console.log("card drag");
-}
-function dragend({ target }){
-    dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
-    target.classList.remove("is-dragging");
-}
+    const divStatus = document.createElement("div");
+    divStatus.setAttribute("class", "status");
 
+    const divContent = document.createElement("div");
+    divContent.setAttribute("class", "content");
+    divContent.innerHTML = inputJob.value;
+
+    divCard.appendChild(divStatus);
+    divCard.appendChild(divContent);
+
+    // ADICIONANDO O CARD NA DROPZONE
+    initialDropzone.appendChild(divCard);
+
+    // CAPTURA O CARD CRIADO
+    const cards = document.querySelectorAll(".card");
+
+    // TODA VEZ QUE UM CARD FOR CRIADO ELE DARÁ O POSSIBILIDADE DE DRAG AND DROP
+    // CARDS
+    cards.forEach(card => {
+        // COMEÇOU A SER ARRASTADO
+        card.addEventListener("dragstart", dragstart);
+        // ESTÁ SENDO ARRASTADO
+        card.addEventListener("drag", drag);
+        // PAROU DE SER ARRASTADO
+        card.addEventListener("dragend", dragend);
+    })
+
+    function dragstart({ target }){
+        dropzones.forEach(dropzone => dropzone.classList.add("highlight"))
+        target.classList.add("is-dragging");
+    }
+    function drag(){
+        // console.log("card drag");
+    }
+    function dragend({ target }){
+        dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
+        target.classList.remove("is-dragging");
+    }
+});
+
+// DROPZONES
 dropzones.forEach(dropzone => {
     // ENTROU NA ZONA
     dropzone.addEventListener("dragenter", dragenter);

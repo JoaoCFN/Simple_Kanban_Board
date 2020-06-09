@@ -12,35 +12,26 @@
 <body>
     <!-- O ATRIBUTO DRAGGABLE FAZ COM QUE OS ITENS QUE O POSSUIREM POSSAM SER ARRASTADOS -->
     <main class="container">
+        <div class="form-group">
+            <h1>Adicione a tarefa</h1>
+            <input type="text" name="job" id="job" placeholder="Digite sua tarefa">
+            <button id="add">Adicionar</button>
+        </div>
+
         <div class="boards">
-            <div class="board">
+            <div class="board" id="todo">
                 <h3>Todo</h3>
-                <div class="dropzone">
-                    <div class="card" draggable="true">
-                        <div class="status green"></div>
-                        <div class="content">Fazer layout</div>
-                    </div>
-                </div>
+                <div class="dropzone initial"></div>
             </div>
 
-            <div class="board">
+            <div class="board" id="inprogress">
                 <h3>In progress</h3>
-                <div class="dropzone">
-                    <div class="card" draggable="true">
-                        <div class="status blue"></div>
-                        <div class="content">Contruir estrutura</div>
-                    </div>
-                </div>
+                <div class="dropzone"></div>
             </div>
 
-            <div class="board">
+            <div class="board" id="done">
                 <h3>Done</h3>
-                <div class="dropzone">
-                    <div class="card" draggable="true">
-                        <div class="status red"></div>
-                        <div class="content">Finalizar homepage</div>
-                    </div>
-                </div>
+                <div class="dropzone"></div>
             </div>
         </div>
 
