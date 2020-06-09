@@ -30,7 +30,7 @@ addButton.addEventListener("click", () => {
     const cards = document.querySelectorAll(".card");
 
     // TODA VEZ QUE UM CARD FOR CRIADO ELE DARÁ O POSSIBILIDADE DE DRAG AND DROP
-    // CARDS
+    // ADICIONA OS EVENTOS DE DRAG AND DROP PARA CADA CARD CRIADO
     cards.forEach(card => {
         // COMEÇOU A SER ARRASTADO
         card.addEventListener("dragstart", dragstart);
@@ -72,12 +72,10 @@ function dragenter(){
 
 function dragover({ target }){
     target.classList.add("over");
-
     // PEGA O CARD QUE ESTÁ SENDO ARRASTADO
     const cardBeingDragged = document.querySelector(".is-dragging");
 
     // E ADICIONA NA DROPZONE QUE ELE ESTIVER SOBRE
-
     // OBS: SE USAR TARGET NA HORA DE ADICIONAR NA ZONA, ELE DÁ ERRO NO APPENDCHILD
     this.appendChild(cardBeingDragged);
 }
