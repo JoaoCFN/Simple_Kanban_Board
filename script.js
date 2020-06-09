@@ -40,16 +40,16 @@ addButton.addEventListener("click", () => {
         card.addEventListener("dragend", dragend);
     })
 
-    function dragstart({ target }){
+    function dragstart(){
         dropzones.forEach(dropzone => dropzone.classList.add("highlight"))
-        target.classList.add("is-dragging");
+        this.classList.add("is-dragging");
     }
     function drag(){
         // console.log("card drag");
     }
-    function dragend({ target }){
+    function dragend(){
         dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
-        target.classList.remove("is-dragging");
+        this.classList.remove("is-dragging");
     }
 
     // LIMPA INPUT
@@ -65,16 +65,15 @@ dropzones.forEach(dropzone => {
     // SAIU DA ZONA
     dropzone.addEventListener("dragleave",dragleave);
     // DROPOU NA ZONA
-    dropzone.addEventListener("drop",
-    drop);
+    dropzone.addEventListener("drop", drop);
 })
 
 function dragenter(){
     // console.log("drag enter");
 }
 
-function dragover({ target }){
-    target.classList.add("over");
+function dragover(){
+    this.classList.add("over");
     // PEGA O CARD QUE ESTÁ SENDO ARRASTADO
     const cardBeingDragged = document.querySelector(".is-dragging");
 
@@ -83,12 +82,12 @@ function dragover({ target }){
     this.appendChild(cardBeingDragged);
 }
 
-function dragleave({ target }){
-    target.classList.remove("over");
+function dragleave(){
+    this.classList.remove("over");
 }
 
-function drop({ target }){
-    target.classList.remove("over");
+function drop(){
+    this.classList.remove("over");
 }
 
 
