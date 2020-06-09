@@ -51,8 +51,8 @@ addButton.addEventListener("click", () => {
         dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
         this.classList.remove("is-dragging");
         /* 
-            RETIRANDO CLASSE OVER QUANDO PARAR SE SER ARRASTADO 
-            NECESSÁRIO PARA CORRIGIR BUG NO FIREFOX
+            RETIRANDO CLASSE OVER QUANDO PARAR DE SER ARRASTADO.
+            ** NECESSÁRIO PARA CORRIGIR BUG NO FIREFOX **
         */
         dropzones.forEach(dropzone => {
             dropzone.classList.remove("over");
