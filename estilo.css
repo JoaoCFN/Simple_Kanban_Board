@@ -29,7 +29,7 @@ body{
 .form-group button{
     padding: 10px;
     font-size: 18px;
-    background-color: #FD951Fcc;
+    background-color: rgba(253, 149, 31, 0.8);
     border: none;
     outline: none;
     border-radius: 4px;
@@ -38,7 +38,7 @@ body{
     background-color: #FD951F;
 }
 .form-group h1{
-    color: #FD951Fcc;
+    color: rgba(253, 149, 31, 0.8);
 }
 
 /* DRAG AND DROP CARDS */
@@ -50,7 +50,7 @@ body{
  
 .boards .board{
     background-color: #141316;
-    border: 1px solid #FD951F11;
+    border: 1px solid rgba(253, 149, 31, 0.067);
     border-radius: 4px;
     margin: 0 16px;
 }
@@ -58,7 +58,7 @@ body{
 .boards .board h3{
     padding: 16px;
     margin: 0;
-    color: #FD951Fcc;
+    color: rgba(253, 149, 31, 0.8);
 }
 
 .board .dropzone{
@@ -69,7 +69,7 @@ body{
 
 .dropzone .card{
     padding: 16px;
-    box-shadow: 0 2px 2px -1px #FD951Fcc;
+    box-shadow: 0 2px 2px -1px rgba(253, 150, 33, 0.8);
     width: 250px;
     margin: 25px 0;
     border-radius: 4px;
@@ -101,14 +101,14 @@ body{
 
 /* CLASSES QUE SERÃO ADICIONADAS PELO JAVASCRIPT */
 .highlight{
-    background-color: #FD951F08;
+    background-color: rgba(253, 149, 31, 0.031);
 }
 .is-dragging{
     cursor: move;
     opacity: 0.3;
 }
 .over{
-    background-color: #4cd13711;
+    background-color: rgba(76, 209, 55, 0.067);
 }
 
 @media screen and (max-width: 1050px){

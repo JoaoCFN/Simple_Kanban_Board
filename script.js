@@ -50,6 +50,11 @@ addButton.addEventListener("click", () => {
     function dragend(){
         dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
         this.classList.remove("is-dragging");
+
+        //DROPZONES
+        dropzones.forEach(dropzone => {
+            dropzone.classList.remove("over");
+        })
     }
 
     // LIMPA INPUT
