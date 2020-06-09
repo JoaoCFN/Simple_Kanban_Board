@@ -51,6 +51,9 @@ addButton.addEventListener("click", () => {
         dropzones.forEach(dropzone => dropzone.classList.remove("highlight"))
         target.classList.remove("is-dragging");
     }
+
+    // LIMPA INPUT
+    inputJob.value = "";
 });
 
 // DROPZONES
