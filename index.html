@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Kanban Board</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="estilo.css">
+    <!-- FONTE NUNITO -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -12,7 +15,7 @@
             <div class="board">
                 <h3>Todo</h3>
                 <div class="dropzone">
-                    <div class="card">
+                    <div class="card" draggable="true">
                         <div class="status"></div>
                         <div class="content">Fazer layout</div>
                     </div>
@@ -20,9 +23,9 @@
             </div>
 
             <div class="board">
-                <h3>Todo</h3>
+                <h3>In progress</h3>
                 <div class="dropzone">
-                    <div class="card">
+                    <div class="card" draggable="true">
                         <div class="status"></div>
                         <div class="content">Contruir estrutura</div>
                     </div>
@@ -30,9 +33,9 @@
             </div>
 
             <div class="board">
-                <h3>Todo</h3>
+                <h3>Done</h3>
                 <div class="dropzone">
-                    <div class="card">
+                    <div class="card" draggable="true">
                         <div class="status"></div>
                         <div class="content">Finalizar homepage</div>
                     </div>
